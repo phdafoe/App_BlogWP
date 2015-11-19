@@ -1,25 +1,144 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="s3y-8J-ewE">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Last news WP-->
+        <scene sceneID="gZh-J6-Q7I">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                <tableViewController id="6bf-uL-VTa" customClass="ICOLastPostWPTableViewController" customModule="App_BlogWP" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="200" sectionHeaderHeight="18" sectionFooterHeight="18" id="1jU-ym-kO1">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                        <animations/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" rowHeight="200" id="z4p-eA-CMw" customClass="ICOCustomTableViewCell" customModule="App_BlogWP" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="114" width="320" height="200"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="z4p-eA-CMw" id="RGB-ec-nEK">
+                                    <rect key="frame" x="0.0" y="0.0" width="287" height="199"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Titulo" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CxV-7P-OHf">
+                                            <rect key="frame" x="8" y="8" width="304" height="21"/>
+                                            <animations/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="8u1-Rv-QBL"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="15"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZJK-a6-0t1">
+                                            <rect key="frame" x="8" y="27" width="304" height="21"/>
+                                            <animations/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="fHC-Lv-gEc"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="13"/>
+                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="reloadImage.png" translatesAutoresizingMaskIntoConstraints="NO" id="RYi-4O-cON">
+                                            <rect key="frame" x="8" y="47" width="304" height="144"/>
+                                            <animations/>
+                                        </imageView>
+                                    </subviews>
+                                    <animations/>
+                                    <constraints>
+                                        <constraint firstItem="CxV-7P-OHf" firstAttribute="trailing" secondItem="RYi-4O-cON" secondAttribute="trailing" id="05b-qr-vTO"/>
+                                        <constraint firstItem="CxV-7P-OHf" firstAttribute="top" secondItem="RGB-ec-nEK" secondAttribute="topMargin" id="EjK-ID-MI1"/>
+                                        <constraint firstItem="CxV-7P-OHf" firstAttribute="trailing" secondItem="RGB-ec-nEK" secondAttribute="trailingMargin" id="LPL-7O-T3K"/>
+                                        <constraint firstItem="ZJK-a6-0t1" firstAttribute="top" secondItem="RGB-ec-nEK" secondAttribute="topMargin" constant="19" id="TmZ-ng-Y1p"/>
+                                        <constraint firstItem="CxV-7P-OHf" firstAttribute="leading" secondItem="RYi-4O-cON" secondAttribute="leading" id="Uu9-O9-mdH"/>
+                                        <constraint firstItem="CxV-7P-OHf" firstAttribute="leading" secondItem="RGB-ec-nEK" secondAttribute="leadingMargin" id="bMM-oz-hgy"/>
+                                        <constraint firstItem="CxV-7P-OHf" firstAttribute="trailing" secondItem="ZJK-a6-0t1" secondAttribute="trailing" id="daT-yA-hP0"/>
+                                        <constraint firstItem="CxV-7P-OHf" firstAttribute="leading" secondItem="ZJK-a6-0t1" secondAttribute="leading" id="e67-nc-ibW"/>
+                                        <constraint firstItem="RYi-4O-cON" firstAttribute="bottom" secondItem="RGB-ec-nEK" secondAttribute="bottomMargin" id="tiX-x5-KYt"/>
+                                        <constraint firstItem="RYi-4O-cON" firstAttribute="top" secondItem="CxV-7P-OHf" secondAttribute="bottom" constant="18" id="wIv-Bf-7dB"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <animations/>
+                                <connections>
+                                    <outlet property="myPOstDate" destination="ZJK-a6-0t1" id="MxA-o1-M6i"/>
+                                    <outlet property="myPostImage" destination="RYi-4O-cON" id="8xN-pO-J43"/>
+                                    <outlet property="myPostTitle" destination="CxV-7P-OHf" id="flV-i1-5gN"/>
+                                    <segue destination="dKj-an-gpW" kind="push" id="LMJ-Vp-Hku"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="6bf-uL-VTa" id="qs3-Qr-EqZ"/>
+                            <outlet property="delegate" destination="6bf-uL-VTa" id="g1x-Ou-emx"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Last news WP" id="Uqx-3A-oDo"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TSE-yb-RfJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="724" y="117"/>
+        </scene>
+        <!--Detail News WP-->
+        <scene sceneID="ZPB-22-hJF">
+            <objects>
+                <viewController id="dKj-an-gpW" customClass="ICOWebViewController" customModule="App_BlogWP" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="q27-q6-nMJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="a4P-Au-9cE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="j2z-9g-p8F">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wwZ-kq-tb7">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                            </webView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wwZ-kq-tb7" firstAttribute="top" secondItem="j2z-9g-p8F" secondAttribute="topMargin" id="FKW-CT-VbM"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="wwZ-kq-tb7" secondAttribute="trailing" constant="-20" id="f74-Ph-gos"/>
+                            <constraint firstItem="wwZ-kq-tb7" firstAttribute="leading" secondItem="j2z-9g-p8F" secondAttribute="leadingMargin" constant="-20" id="lyr-lO-SIu"/>
+                            <constraint firstItem="a4P-Au-9cE" firstAttribute="top" secondItem="wwZ-kq-tb7" secondAttribute="bottom" id="pjb-Of-Jwd"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Detail News WP" id="DBF-hX-WzS"/>
+                    <connections>
+                        <outlet property="myWebView" destination="wwZ-kq-tb7" id="D9x-9H-BHt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1MF-WN-Ugc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1152" y="117"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="x6i-Da-d6f">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="s3y-8J-ewE" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="x5G-XE-Sln">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="6bf-uL-VTa" kind="relationship" relationship="rootViewController" id="WAC-Uo-DhN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Chj-cT-LyW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="291.19999999999999" y="117.38666666666667"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="reloadImage.png" width="250" height="250"/>
+    </resources>
 </document>
